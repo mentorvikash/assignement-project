@@ -1,5 +1,4 @@
 import React from "react";
-import ProductList from "./Product";
 import FormData from "./Form";
 
 const Home: React.FC = () => {
@@ -16,7 +15,6 @@ const Home: React.FC = () => {
           </h2>
         </div>
         <FormData />
-        <ProductList />
       </div>
     </>
   );

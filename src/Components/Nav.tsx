@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const Nav = () => {
   return (
     <div className="flex  h-12 items-center p-2 justify-between border-b-2 text-sm font-bold bg-slate-50">
@@ -6,13 +7,29 @@ const Nav = () => {
       </div>
       <div className="flex justify-between items-center w-[50%]">
         <img className="h-8" src="src/assets/Frame.png" alt="" />
-        <p>Lists</p>
-        <p>Gift Exchange</p>
-        <p>Shop</p>
-        <p>Occasions</p>
-        <p>Ecards</p>
-        <p>Blog</p>
-        <p>FAQ</p>
+        <ul className="flex w-full justify-around ">
+          <li>
+            <Link to={"list"}>Lists</Link>{" "}
+          </li>
+          <li>
+            <Link to={"#"}>Gift Exchange</Link>{" "}
+          </li>
+          <li>
+            <Link to={"#"}>Shop</Link>{" "}
+          </li>
+          <li>
+            <Link to={"#"}>Occasions</Link>{" "}
+          </li>
+          <li>
+            <Link to={"#"}>Ecards</Link>{" "}
+          </li>
+          <li>
+            <Link to={"#"}>Blog</Link>{" "}
+          </li>
+          <li>
+            <Link to={"#"}>FAQ</Link>{" "}
+          </li>
+        </ul>
       </div>
       <div className="flex items-center w-[10%] ">
         <p>jane Smith</p>
