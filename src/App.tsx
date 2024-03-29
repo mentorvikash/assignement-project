@@ -7,10 +7,11 @@ import ProductList from "./Components/Product";
 function App() {
   return (
     <>
-      <Nav />
       <Routes>
-        <Route path="/" Component={Home} />
-        <Route path="/list" Component={ProductList} />
+        <Route path="/" element={<Nav />}>
+          <Route index Component={Home} />
+          <Route path="/list" Component={ProductList} />
+        </Route>
       </Routes>
     </>
   );
