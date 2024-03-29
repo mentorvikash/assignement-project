@@ -1,18 +1,23 @@
 import React, { useState } from "react";
 // import { useDispatch } from "react-redux";
-import { FormDataType, updateFormData } from "../store/formSlice";
-
+import {
+  FormDataType,
+  clearFormData,
+  updateFormData,
+} from "../store/formSlice";
 import * as yup from "yup";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
-// type Step2FormPropsType = {
-//   onSubmit: (formData: FormDataType) => void;
-// };
+type Step2FormPropsType = {
+  setCurrentStep: (value: number) => void;
+};
 
-const Step2Form: React.FC = () => {
+const Step2Form = ({ setCurrentStep }: Step2FormPropsType) => {
   const dispatch = useDispatch();
 
   // const { onSubmit } = props;
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState<FormDataType>({} as FormDataType);
 
@@ -45,7 +50,9 @@ const Step2Form: React.FC = () => {
       console.log(formData);
       // formData.step = 2;
       dispatch(updateFormData(formData));
-      // onSubmit(formData);
+      dispatch(clearFormData());
+      setCurrentStep(1);
+      navigate("/list");
       // Clear the form state after dispatching
       setFormData({
         occasion: "",

@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { useDispatch } from "react-redux";
+import { clearFormData } from "./store/formSlice";
 
 const schema = yup.object({
   whoFor: yup.string().required("Who are you buying for? is required"),
@@ -27,9 +29,11 @@ export default function App() {
     mode: "onBlur", // Validate on blur to show errors immediately
   });
 
+  const dispatch = useDispatch();
   const onSubmit = (data) => {
     if (step === 1) {
       setStep(2);
+      dispatch(clearFormData());
     } else {
       console.log(data);
       // Here you would typically submit the form data
