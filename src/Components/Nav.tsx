@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const Nav = () => {
   return (
     <div className="flex  h-12 items-center p-2 justify-between border-b-2 text-sm font-bold bg-slate-50">
@@ -9,25 +9,25 @@ const Nav = () => {
         <img className="h-8" src="src/assets/Frame.png" alt="" />
         <ul className="flex w-full justify-around ">
           <li>
-            <Link to={"list"}>Lists</Link>{" "}
+            <NavLink to={"/list"}>Lists</NavLink>{" "}
           </li>
           <li>
-            <Link to={"#"}>Gift Exchange</Link>{" "}
+            <NavLink to={"#"}>Gift Exchange</NavLink>{" "}
           </li>
           <li>
-            <Link to={"#"}>Shop</Link>{" "}
+            <NavLink to={"#"}>Shop</NavLink>{" "}
           </li>
           <li>
-            <Link to={"#"}>Occasions</Link>{" "}
+            <NavLink to={"#"}>Occasions</NavLink>{" "}
           </li>
           <li>
-            <Link to={"#"}>Ecards</Link>{" "}
+            <NavLink to={"#"}>Ecards</NavLink>{" "}
           </li>
           <li>
-            <Link to={"#"}>Blog</Link>{" "}
+            <NavLink to={"#"}>Blog</NavLink>{" "}
           </li>
           <li>
-            <Link to={"#"}>FAQ</Link>{" "}
+            <NavLink to={"#"}>FAQ</NavLink>{" "}
           </li>
         </ul>
       </div>
