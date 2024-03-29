@@ -1,9 +1,11 @@
 import "./App.css";
 import FormData from "./Components/Form";
 import ProductList from "./Components/Product";
+import Nav from "./Components/Nav";
 function App() {
   return (
     <>
+      <Nav />
       <h1 className="text-3xl font-bold underline"></h1>
       <div className="flex flex-col gap-5 align-middle border border-red-900 m-4">
         <div className="mb-5 w-full flex justify-center">
