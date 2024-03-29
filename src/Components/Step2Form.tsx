@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import { useDispatch } from "react-redux";
 import {
   FormDataType,
   clearFormData,
@@ -15,12 +14,8 @@ type Step2FormPropsType = {
 
 const Step2Form = ({ setCurrentStep }: Step2FormPropsType) => {
   const dispatch = useDispatch();
-
-  // const { onSubmit } = props;
   const navigate = useNavigate();
-
   const [formData, setFormData] = useState<FormDataType>({} as FormDataType);
-
   const [errors, setErrors] = useState<
     Partial<{ [key in keyof typeof formData]: string }>
   >({});
@@ -47,13 +42,10 @@ const Step2Form = ({ setCurrentStep }: Step2FormPropsType) => {
     e.preventDefault();
     try {
       await schema.validate(formData, { abortEarly: false });
-      console.log(formData);
-      // formData.step = 2;
       dispatch(updateFormData(formData));
       dispatch(clearFormData());
       setCurrentStep(1);
       navigate("/list");
-      // Clear the form state after dispatching
       setFormData({
         occasion: "",
         giftType: "",

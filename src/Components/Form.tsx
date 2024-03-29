@@ -17,9 +17,22 @@ const FormData: React.FC = () => {
   }, [step]);
 
   return (
-    <div className="max-w-md mx-auto mt-8">
-      {currentStep === 1 && <Step1Form />}
-      {currentStep === 2 && <Step2Form setCurrentStep={setCurrentStep} />}
+    <div className="flex flex-col gap-5 align-middle m-4">
+      <div className="mb-5 w-full flex justify-center">
+        <img className="" src="src/assets/gift.png" alt="box" width={100} />
+      </div>
+      <div className="mb-1 text-center w-full">
+        <h2 className="font-semibold text-4xl ">
+          {step === 1
+            ? "Tell us about your gift recipient"
+            : "Help us find the right gift!"}
+        </h2>
+      </div>
+
+      <div className="max-w-md mx-auto mt-8">
+        {currentStep === 1 && <Step1Form />}
+        {currentStep === 2 && <Step2Form setCurrentStep={setCurrentStep} />}
+      </div>
     </div>
   );
 };
