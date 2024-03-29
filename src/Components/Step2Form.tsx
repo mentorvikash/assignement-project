@@ -70,9 +70,9 @@ const Step2Form = ({ setCurrentStep }: Step2FormPropsType) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-md mx-auto mt-8">
+    <form onSubmit={handleSubmit} className="max-w-lg mx-auto mt-2">
       <div className="mb-4">
-        <label htmlFor="occasion" className="block font-medium text-gray-700">
+        <label htmlFor="occasion" className="block font-semibold text-gray-700">
           What's the occasion?
         </label>
         <input
@@ -81,7 +81,7 @@ const Step2Form = ({ setCurrentStep }: Step2FormPropsType) => {
           id="occasion"
           value={formData.occasion}
           onChange={handleInputChange}
-          className={`mt-1 p-2 w-full border-gray-300 rounded-md ${
+          className={`mt-1 p-2 w-full border border-gray-300 rounded-md ${
             errors.occasion ? "border-red-500" : ""
           }`}
         />
@@ -90,7 +90,7 @@ const Step2Form = ({ setCurrentStep }: Step2FormPropsType) => {
         )}
       </div>
       <div className="mb-4">
-        <label htmlFor="giftType" className="block font-medium text-gray-700">
+        <label htmlFor="giftType" className="block font-semibold text-gray-700">
           What type of a gift would you like?
         </label>
         <select
@@ -98,7 +98,7 @@ const Step2Form = ({ setCurrentStep }: Step2FormPropsType) => {
           id="giftType"
           value={formData.giftType}
           onChange={handleInputChange}
-          className={`mt-1 p-2 w-full border-gray-300 rounded-md ${
+          className={`mt-1 p-2 w-full border border-gray-300 rounded-md ${
             errors.giftType ? "border-red-500" : ""
           }`}
         >
@@ -112,7 +112,7 @@ const Step2Form = ({ setCurrentStep }: Step2FormPropsType) => {
         )}
       </div>
       <div className="mb-4">
-        <label htmlFor="currency" className="block font-medium text-gray-700">
+        <label htmlFor="currency" className="block font-semibold text-gray-700">
           Currency
         </label>
         <input
@@ -121,7 +121,7 @@ const Step2Form = ({ setCurrentStep }: Step2FormPropsType) => {
           id="currency"
           value={formData.currency}
           onChange={handleInputChange}
-          className={`mt-1 p-2 w-full border-gray-300 rounded-md ${
+          className={`mt-1 p-2 w-full border border-gray-300 rounded-md ${
             errors["currency"] ? "border-red-500" : ""
           }`}
         />
@@ -130,7 +130,7 @@ const Step2Form = ({ setCurrentStep }: Step2FormPropsType) => {
         )}
       </div>
       <div className="mb-4">
-        <label htmlFor="amount" className="block font-medium text-gray-700">
+        <label htmlFor="amount" className="block font-semibold text-gray-700">
           Maximum budget
         </label>
         <input
@@ -139,7 +139,7 @@ const Step2Form = ({ setCurrentStep }: Step2FormPropsType) => {
           id="amount"
           value={formData.amount}
           onChange={handleInputChange}
-          className={`mt-1 p-2 w-full border-gray-300 rounded-md ${
+          className={`mt-1 p-2 w-full border border-gray-300 rounded-md ${
             errors["amount"] ? "border-red-500" : ""
           }`}
         />
@@ -148,7 +148,7 @@ const Step2Form = ({ setCurrentStep }: Step2FormPropsType) => {
         )}
       </div>
       <div className="mb-4">
-        <label htmlFor="country" className="block font-medium text-gray-700">
+        <label htmlFor="country" className="block font-semibold text-gray-700">
           What country should we return the results for?
         </label>
         <input
@@ -157,7 +157,7 @@ const Step2Form = ({ setCurrentStep }: Step2FormPropsType) => {
           id="country"
           value={formData.country}
           onChange={handleInputChange}
-          className={`mt-1 p-2 w-full border-gray-300 rounded-md ${
+          className={`mt-1 p-2 w-full border border-gray-900 rounded-md ${
             errors.country ? "border-red-500" : ""
           }`}
         />

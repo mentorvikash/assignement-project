@@ -17,7 +17,7 @@ const FormData: React.FC = () => {
   }, [step]);
 
   return (
-    <div className="flex flex-col gap-5 align-middle m-4">
+    <div className="flex flex-col gap-5 align-middle m-16">
       <div className="mb-5 w-full flex justify-center">
         <img className="" src="src/assets/gift.png" alt="box" width={100} />
       </div>
@@ -29,7 +29,7 @@ const FormData: React.FC = () => {
         </h2>
       </div>
 
-      <div className="max-w-md mx-auto mt-8">
+      <div className="">
         {currentStep === 1 && <Step1Form />}
         {currentStep === 2 && <Step2Form setCurrentStep={setCurrentStep} />}
       </div>

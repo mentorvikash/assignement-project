@@ -75,7 +75,7 @@ const Step1Form: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-md mx-auto mt-8">
+    <form onSubmit={handleSubmit} className="max-w-lg mx-auto p-2">
       <div className="mb-4">
         <label htmlFor="whoFor" className="block font-medium text-gray-700">
           Who are you buying for?
@@ -86,7 +86,7 @@ const Step1Form: React.FC = () => {
           id="whoFor"
           value={formData.whoFor}
           onChange={handleInputChange}
-          className={`mt-1 p-2 w-full border-gray-300 rounded-md ${
+          className={`mt-1 p-2 w-full border border-gray-300 rounded-md ${
             errors.whoFor ? "border-red-500" : ""
           }`}
         />
@@ -102,14 +102,14 @@ const Step1Form: React.FC = () => {
           id="age"
           value={formData.age}
           onChange={handleInputChange}
-          className={`mt-1 p-2 w-full border-gray-300 rounded-md ${
+          className={`mt-1 p-2 w-full border border-gray-300 rounded-md ${
             errors.age ? "border-red-500" : ""
           }`}
         />
         {errors.age && <p className="text-red-500 mt-1">{errors.age}</p>}
       </div>
       <div className="mb-4">
-        <label className="block font-medium text-gray-700">
+        <label className="block font-medium text-gray-700 mb-2">
           They identify as:
         </label>
         <div>
@@ -121,7 +121,7 @@ const Step1Form: React.FC = () => {
               value="male"
               checked={formData.gender === "male"}
               onChange={handleInputChange}
-              className="mr-2"
+              className="mr-2 border border-gray-300 rounded-md"
             />
             Male
           </label>
@@ -133,7 +133,7 @@ const Step1Form: React.FC = () => {
               value="female"
               checked={formData.gender === "female"}
               onChange={handleInputChange}
-              className="mr-2"
+              className="mr-2 border border-gray-300 rounded-md"
             />
             Female
           </label>
@@ -145,7 +145,7 @@ const Step1Form: React.FC = () => {
               value="other"
               checked={formData.gender === "other"}
               onChange={handleInputChange}
-              className="mr-2"
+              className="mr-2 border border-gray-300 rounded-md"
             />
             Other
           </label>
@@ -162,7 +162,7 @@ const Step1Form: React.FC = () => {
           id="interest"
           value={formData.interest}
           onChange={handleInputChange}
-          className={`mt-1 p-2 w-full border-gray-300 rounded-md ${
+          className={`mt-1 p-2 w-full border border-gray-300 rounded-md  ${
             errors.interest ? "border-red-500" : ""
           }`}
         />
